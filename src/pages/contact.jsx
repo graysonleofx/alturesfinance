@@ -79,7 +79,7 @@ const ContactUs = () => {
 
   const contactDetails = {
     phone: '+1 (000) 000-0000',
-    email: 'customerservice@brno-bank.com',
+    email: 'customerservice@alturasfinance.com',
     address: '123 Finance Drive, Suite 400, Melbourne VIC 3000, Australia',
     hours: [
       { days: 'Mon - Fri', times: '9:00 AM - 6:00 PM' },
