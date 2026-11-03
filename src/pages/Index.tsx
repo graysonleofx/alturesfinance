@@ -168,11 +168,11 @@ function HeroBanner() {
   return (
     <section className="hero-banner" aria-labelledby="hero-title">
       <div className="hero-copy">
-        <span className="eyebrow">A developer-built portfolio project</span>
-        <h1 id="hero-title">A clearer view of your finances</h1>
-        <p className="hero-description">Explore the Alturas Finance interface concept, created to showcase product design and frontend development.</p>
-        <p className="hero-disclaimer">All balances, transactions, and financial products shown are illustrative.</p>
-        <Link className="outline-button" to="/open-account">Explore the demo <ArrowRight size={17} aria-hidden="true" /></Link>
+        <span className="eyebrow">Personal banking, thoughtfully designed</span>
+        <h1 id="hero-title">Banking that helps you move forward</h1>
+        <p className="hero-description">Explore everyday banking tools designed to help you manage your money, plan ahead, and stay in control.</p>
+        {/* <p className="hero-disclaimer">All balances, transactions, and financial products shown are illustrative.</p> */}
+        <Link className="outline-button" to="/open-account">Get Started <ArrowRight size={17} aria-hidden="true" /></Link>
       </div>
       <div className="hero-image-wrap">
         <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=85" alt="Colleagues planning together in a bright modern workspace" />
