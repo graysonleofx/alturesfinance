@@ -19,7 +19,7 @@ const TransactionReceipt = ({ type, formData, onClose }) => {
 
   const handleCopy = () => {
     const receiptText = `
-      Federal Edge Finance - Transaction Receipt
+      Alturas Finance Demo - Simulated Transaction Receipt
       Transaction ID: ${transactionId}
       Type: ${type === 'transfer' ? 'Money Transfer' : 'Withdrawal'}
       Date: ${timestamp}

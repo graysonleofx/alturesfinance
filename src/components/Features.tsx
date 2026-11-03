@@ -11,33 +11,33 @@ const Features = () => {
   const features = [
     {
       icon: CreditCard,
-      title: 'Create Virtual Account',
-      description: 'Get your virtual account number instantly and start receiving payments immediately.',
+      title: 'Account UI Preview',
+      description: 'Explore a sample account setup flow designed for the portfolio demo.',
     },
     {
       icon: Clock,
-      title: 'Real-Time Deposits',
-      description: 'Instant notifications and real-time balance updates for all your transactions.',
+      title: 'Simulated Activity',
+      description: 'Preview example notifications and balance updates using illustrative data.',
     },
     {
       icon: Shield,
-      title: 'Secure Transfers',
-      description: 'Bank-grade encryption and security protocols protect every transaction.',
+      title: 'Transfer Flow Preview',
+      description: 'Explore a fictional transfer interface; no real payments can be made.',
     },
     {
       icon: MessageCircle,
-      title: '24/7 Chat Support',
-      description: 'Get help anytime with our dedicated customer support team.',
+      title: 'Support UI Preview',
+      description: 'See a sample support experience included for interface demonstration.',
     },
     {
       icon: Lock,
-      title: 'Fraud Protection',
-      description: 'Advanced AI-powered fraud detection keeps your money safe.',
+      title: 'Safety Concepts',
+      description: 'Review illustrative safety messaging; no fraud monitoring is provided.',
     },
     {
       icon: BarChart3,
-      title: 'Transaction Tracking',
-      description: 'Detailed analytics and insights to help you manage your finances better.',
+      title: 'Sample Analytics',
+      description: 'Preview illustrative charts and transaction history in the demo.',
     },
   ];
 
@@ -48,11 +48,11 @@ const Features = () => {
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
             Powerful Features for{' '}
             <span className="text-transparent bg-gradient-primary bg-clip-text">
-              Modern Banking
+              Finance UI Demo
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Everything you need to manage your finances efficiently and securely in one platform.
+            A portfolio project demonstrating common finance-product interface patterns. No real financial products or services are offered.
           </p>
         </div>
 

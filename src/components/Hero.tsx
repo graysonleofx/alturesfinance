@@ -66,7 +66,7 @@ const Hero = () => {
             <div className="relative z-10">
               <img
                 src={heroImage}
-                alt="Smart Banking Dashboard"
+                alt="Alturas Finance developer UI demo dashboard"
                 className="rounded-2xl shadow-banking w-full h-auto"
               />
             </div>

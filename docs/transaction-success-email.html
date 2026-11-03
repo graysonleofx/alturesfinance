@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light">
-    <title>{{transaction_type}} Successful - BMO Banking</title>
+    <title>Alturas Finance Demo - {{transaction_type}} Simulation</title>
     <style>
       body {
         margin: 0;
@@ -24,7 +24,7 @@
       }
       .header {
         padding: 26px 32px;
-        background: #123b5d;
+        background: #0F172A;
         color: #ffffff;
       }
       .brand {
@@ -42,8 +42,8 @@
         padding: 32px;
       }
       .status {
-        margin: 0 0 22px;
-        color: #167447;
+        margin: 8px 10px 22px;
+        color: #047857;
         font-size: 22px;
         line-height: 1.35;
       }
@@ -99,7 +99,7 @@
         margin-top: 18px;
         padding: 11px 16px;
         border-radius: 4px;
-        background: #123b5d;
+        background: #0F172A;
         color: #ffffff !important;
         font-size: 14px;
         font-weight: 700;
@@ -142,14 +142,11 @@
   <body>
     <div class="email-shell">
       <div class="header">
-        <img src="	https://www.bmo.com/dist/images/logos/bmo-blue-on-transparent-en.svg" alt="BMO Bank" style="max-width:120px;">
-        <!-- <p class="brand">BMO BANKING</p> -->
-        <p class="tagline">Secure Digital Banking</p>
+      <!-- Logo Placeholder -->
+        <img src="https://www.image2url.com/r2/default/images/1793741035195-5db59411-8979-40c0-8190-c24e094dd32c.png" alt="Altures Finance" style="width:100%">
       </div>
       <main class="content">
-        <h1 class="status">&#10003; {{transaction_type}} Successful</h1>
-        <p class="greeting">Hello {{user_name}},</p>
-        <p class="intro">Your {{transaction_type}} has been successfully completed.</p>
+        <h1 class="status">{{transaction_type}} Successful</h1>
         <div class="amount">{{currency}} {{amount}}</div>
 
         <h2 class="section-title">Transaction Details</h2>
@@ -163,16 +160,10 @@
           <tr><th scope="row">Description</th><td>{{description}}</td></tr>
         </table>
 
-        <div class="security">
-          <strong>Security Notice</strong><br>
-          If you did not authorize this transaction, please contact BMO Banking support immediately.
-        </div>
-        <a class="support-link" href="mailto:contactus.bmobank@gmail.com">Contact Support</a>
       </main>
       <footer class="footer">
-        <p><strong>BMO Banking</strong></p>
-        <p>Secure &bull; Reliable &bull; Simple</p>
-        <p>This is an automated transaction notification. Please do not reply to this email.</p>
+        <p><strong>Alturas Finance</strong></p>
+        <p style="font-family:Arial,sans-serif;color:#aaa;font-size:12px;margin:24px 0 0 0;">&copy; {{new Date().getFullYear()}} Altures Finance. All rights reserved.</p>
       </footer>
     </div>
   </body>

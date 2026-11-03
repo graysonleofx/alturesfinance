@@ -1,5 +1,4 @@
-import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
-import brand from '@/assets/bank.png';
+import { Facebook, Twitter, Linkedin, Instagram, Landmark } from 'lucide-react';
 
 const Footer = () => {
   const footerLinks = {
@@ -43,14 +42,14 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              {/* <div className="h-8 w-8 rounded-lg bg-gradient-accent"></div>
-              <span className="text-xl font-bold">Bmo Bank</span> */}
-              <img src={brand} alt="Bank Logo" className="w-16 h-14 rounded-lg bg-slate-200" />
-              <span className="text-xl font-bold">Bmo Bank</span>
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent text-accent-foreground">
+                <Landmark className="h-5 w-5" aria-hidden="true" />
+              </div>
+              <span className="text-xl font-bold">Alturas Finance</span>
             </div>
             <p className="text-primary-foreground/80 leading-relaxed mb-6 max-w-md">
-              Empowering individuals and businesses with cutting-edge digital banking solutions. 
-              Banking made simple, secure, and smart.
+              A developer-created interface concept for a fictional finance product.
+              No real accounts or financial services are offered.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -138,11 +137,11 @@ const Footer = () => {
         {/* Bottom section */}
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-primary-foreground/60 text-sm">
-            {`© ${new Date().getFullYear()} Bmo Bank. All rights reserved.`}
+            Alturas Finance · Developer UI demo and portfolio project
           </p>
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
             <span className="text-primary-foreground/60 text-sm">
-              Licensed and regulated financial institution
+              No real financial services are offered
             </span>
           </div>
         </div>

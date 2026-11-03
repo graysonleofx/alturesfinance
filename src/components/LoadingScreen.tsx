@@ -15,8 +15,8 @@ const LoadingScreen = () => {
         
         {/* Loading text */}
         <div className="text-center">
-          <h3 className="text-lg font-semibold text-foreground">Federal Edge Finance</h3>
-          <p className="text-sm text-muted-foreground animate-pulse">Loading your banking experience...</p>
+          <h3 className="text-lg font-semibold text-foreground">Alturas Finance</h3>
+          <p className="text-sm text-muted-foreground animate-pulse">Loading the portfolio demo...</p>
         </div>
         
         {/* Progress dots */}

@@ -8,28 +8,28 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: 'How long does it take to open an account?',
-      answer: 'You can open your Federal Edge Finance account in less than 2 minutes. Simply provide your email, phone number, and basic personal information to get started immediately.',
+      question: 'What is the Alturas Finance demo?',
+      answer: 'Alturas Finance is a developer UI demo and portfolio project that showcases a fictional finance interface.',
     },
     {
-      question: 'Are my deposits and withdrawals instant?',
-      answer: 'Yes! Deposits are credited to your account instantly, and you\'ll receive real-time notifications. Withdrawals typically process within minutes during business hours.',
+      question: 'Are the accounts and transactions real?',
+      answer: 'No. Account details, balances, deposits, transfers, and withdrawals shown in this project are illustrative and do not represent real financial activity.',
     },
     {
-      question: 'How secure is my money with Federal Edge Finance?',
-      answer: 'Your funds are protected by bank-grade encryption, multi-factor authentication, and advanced fraud detection. We\'re also insured and regulated by the appropriate financial authorities.',
+      question: 'Is Alturas Finance a bank?',
+      answer: 'No. Alturas Finance is not a bank or financial institution and does not provide financial products or services.',
     },
     {
-      question: 'What are the fees for transactions?',
-      answer: 'We believe in transparent pricing. Account opening is free, and most standard transactions have minimal fees. Check our fee schedule for detailed information on all charges.',
+      question: 'Can I use the demo to make payments?',
+      answer: 'No. The interface is for portfolio demonstration only and cannot be used to make or receive payments.',
     },
     {
-      question: 'Can I access my account 24/7?',
-      answer: 'Absolutely! Your Federal Edge Finance account is available 24/7 through our mobile app and web platform. Our customer support team is also available around the clock to assist you.',
+      question: 'Why was this project created?',
+      answer: 'It demonstrates interface design and frontend development patterns for a fictional finance product.',
     },
     {
-      question: 'How do virtual account numbers work?',
-      answer: 'Virtual account numbers are unique identifiers that allow you to receive payments directly to your Federal Edge Finance account. They work just like traditional account numbers but are generated instantly.',
+      question: 'Do the forms create real accounts?',
+      answer: 'Forms are part of the interface demo. Do not enter real payment credentials or sensitive financial information.',
     },
   ];
 

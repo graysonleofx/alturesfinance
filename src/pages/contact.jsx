@@ -89,13 +89,13 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="northline-page northline-contact-page">
+    <div className="alturas-page alturas-contact-page">
       <BankPageHeader page="contact" />
-      <main className="northline-page-content northline-contact-layout" id="contact">
+      <main className="alturas-page-content alturas-contact-layout" id="contact">
           {/* Form card */}
-          <div className="northline-contact-panel">
-            <h1 className="northline-contact-title">Contact us</h1>
-            <p className="northline-contact-intro">We'd love to help. Send us a message and our team will get back to you within one business day.</p>
+          <div className="alturas-contact-panel">
+            <h1 className="alturas-contact-title">Contact us</h1>
+            <p className="alturas-contact-intro">This sample contact page is part of the Alturas Finance portfolio demo. Do not submit sensitive or financial information.</p>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
@@ -193,7 +193,7 @@ const ContactUs = () => {
                 <button
                   type="submit"
                   disabled={isSending}
-                  className={`northline-primary-button w-full flex items-center justify-center gap-3 rounded-lg py-3 text-white text-sm font-medium transition ${
+                  className={`alturas-primary-button w-full flex items-center justify-center gap-3 rounded-lg py-3 text-white text-sm font-medium transition ${
                     isSending ? 'bg-primary/70 cursor-wait' : 'bg-primary hover:bg-primary-dark'
                   }`}
                 >
@@ -205,7 +205,7 @@ const ContactUs = () => {
 
           {/* Info + Map panel */}
           <aside className="space-y-5">
-            <div className="northline-contact-info">
+            <div className="alturas-contact-info">
               <h3 className="text-2xl font-semibold text-primary mb-2">Our Location & Contact</h3>
               <p className="text-sm text-gray-600 mb-4">Reach out directly or visit our main branch during business hours.</p>
 
@@ -254,7 +254,7 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <div className="northline-contact-map">
+            <div className="alturas-contact-map">
               <iframe
                 title="Bank Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153166!3d-37.81627974202195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6a5b8b8b8b8!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1614031234567!5m2!1sen!2sau"

@@ -11,10 +11,9 @@ import { InputOTP, InputOTPGroup, InputOTPSlot } from '@/components/ui/input-otp
 import ProfileSection from '@/components/ProfileSection.jsx';
 import SupportSection from '@/components/SupportSection';
 import { useToast } from '@/hooks/use-toast';
-import { Home, CreditCard, ArrowDownToLine, ArrowUpFromLine, Send, User, HelpCircle, LogOut, Bell, Eye, EyeOff, Gift, Settings, Copy, Check, Menu, X, Wallet, ArrowLeftRight, Receipt, PiggyBank, CircleDollarSign, TrendingUp, ChevronRight, ArrowUpRight, ArrowDownRight, ShieldCheck } from 'lucide-react';
+import { Home, CreditCard, ArrowDownToLine, ArrowUpFromLine, Send, User, HelpCircle, LogOut, Bell, Eye, EyeOff, Gift, Settings, Copy, Check, Menu, X, Wallet, ArrowLeftRight, Receipt, PiggyBank, CircleDollarSign, TrendingUp, ChevronRight, ArrowUpRight, ArrowDownRight, ShieldCheck, Landmark } from 'lucide-react';
 import supabase from  '../lib/supabaseClient';
 import ChequeDepositForm from '@/components/ChequeDepositForm';
-import bankLogo from '@/assets/bank.png';
 import './Dashboard.css';
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -220,14 +219,14 @@ const Dashboard = () => {
     setReferralCodeCopied(true);
     toast({
       title: "Referral code copied!",
-      description: "Share it with friends to earn $5,000 each"
+      description: "This demo share code has been copied."
     });
     setTimeout(() => setReferralCodeCopied(false), 2000);
   };
   const bankDetails = {
-    accountName: "Smart Digital Bank",
+    accountName: "Alturas Finance Demo",
     accountNumber: "3032410090",
-    bankName: "BMO Bank",
+    bankName: "Alturas Finance",
     routingNumber: "021000021"
   };
   const showDashboardSection = (sectionId) => {
@@ -517,7 +516,7 @@ const Dashboard = () => {
         <div className="dashboard-layout">
           {/* Desktop Sidebar */}
         <aside className="dashboard-sidebar hidden md:flex" aria-label="Dashboard sidebar">
-          <div ><img src="https://www.bmo.com/dist/images/logos/bmo-blue-on-transparent-en.svg" alt="BMO Bank"  width="100" height="40" /></div>
+          <div className="dashboard-sidebar-brand"><Landmark aria-hidden="true" /><span>Alturas Finance</span></div>
           <p className="dashboard-sidebar-caption">Banking</p>
           <nav className="dashboard-sidebar-nav" aria-label="Dashboard navigation">{renderSidebarItems()}</nav>
           <div className="dashboard-sidebar-bottom">
@@ -529,7 +528,7 @@ const Dashboard = () => {
         {mobileSidebarOpen && <>
           <button type="button" className="dashboard-mobile-backdrop md:hidden" aria-label="Close dashboard menu" onClick={() => setMobileSidebarOpen(false)} />
           <aside className="dashboard-sidebar dashboard-mobile-sidebar md:hidden" aria-label="Dashboard menu">
-            <div className="dashboard-sidebar-brand"><img src={bankLogo} alt="BMO Bank" /><span>BMO Bank</span></div>
+            <div className="dashboard-sidebar-brand"><Landmark aria-hidden="true" /><span>Alturas Finance</span></div>
             <p className="dashboard-sidebar-caption">Banking</p>
             <nav className="dashboard-sidebar-nav" aria-label="Mobile dashboard navigation">{renderSidebarItems()}</nav>
             <div className="dashboard-sidebar-bottom">
@@ -674,7 +673,7 @@ const Dashboard = () => {
                 <div className="dashboard-feature-grid">
                   {/* <article className="dashboard-debit-card">
                     <div className="dashboard-debit-card-inner">
-                      <div className="flex items-start justify-between"><div><p className="text-sm font-semibold">Federal Edge Finance</p><p className="mt-1 text-xs opacity-75">Virtual debit card</p></div><CreditCard className="h-6 w-6 opacity-90" /></div>
+                      <div className="flex items-start justify-between"><div><p className="text-sm font-semibold">Alturas Finance Demo</p><p className="mt-1 text-xs opacity-75">Illustrative virtual debit card</p></div><CreditCard className="h-6 w-6 opacity-90" /></div>
                       <div className="dashboard-card-chip" aria-hidden="true" />
                       <div><p className="font-mono text-lg tracking-wider">•••• •••• •••• {accountNumber ? String(accountNumber).slice(-4) : '••••'}</p><div className="mt-4 flex items-end justify-between"><div><p className="text-[10px] uppercase opacity-70">Cardholder</p><p className="mt-1 text-sm font-semibold">{userName.toUpperCase()}</p></div><ShieldCheck className="h-5 w-5 opacity-80" /></div></div>
                     </div>
@@ -687,7 +686,7 @@ const Dashboard = () => {
                       <div className="bg-gradient-primary p-4 md:p-6 rounded-lg text-white">
                         <div className="flex justify-between items-start mb-6 md:mb-8">
                           <div>
-                            <p className="text-sm opacity-80">BMO Bank</p>
+                            <p className="text-sm opacity-80">Alturas Finance demo</p>
                             <p className="text-xs opacity-60">Virtual Debit Card</p>
                           </div>
                           <div className="text-right">

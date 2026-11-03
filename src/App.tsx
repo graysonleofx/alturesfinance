@@ -27,6 +27,9 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        {/* <div className="demo-banner" role="note">
+          Alturas Finance is a banking interface concept created for educational and portfolio purposes. It is not a financial institution and does not provide real financial services.
+        </div> */}
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/open-account" element={<OpenAccount />} />

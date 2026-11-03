@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 
 .bank-home {
-  --bank-blue: #0072ce;
-  --bank-navy: #062b45;
-  --bank-deep-blue: #005a8d;
+  --bank-blue: #10B981;
+  --bank-navy: #0F172A;
+  --bank-deep-blue: #047857;
   --bank-pale: #f5f7f8;
   --bank-border: #d9dee3;
   --bank-muted: #596a78;
@@ -25,7 +25,7 @@
 .bank-home a { color: inherit; text-decoration: none; }
 .bank-home button:focus-visible,
 .bank-home a:focus-visible,
-.bank-home input:focus-visible { outline: 3px solid #f2b544; outline-offset: 3px; }
+.bank-home input:focus-visible { outline: 3px solid #10B981; outline-offset: 3px; }
 
 .utility-bar {
   height: 43px;
@@ -34,6 +34,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--bank-border);
+  background: #fff;
   color: #405363;
   font-size: 13px;
 }
@@ -52,7 +53,7 @@
 .utility-country:hover,
 .utility-personal:hover { color: var(--bank-blue); }
 
-.bank-header { position: relative; z-index: 5; background: #fff; }
+.bank-header { position: relative; z-index: 5; background: var(--bank-navy); color: #fff; }
 .main-nav-row {
   min-height: 76px;
   max-width: 1200px;
@@ -63,23 +64,23 @@
   justify-content: space-between;
   gap: 38px;
 }
-.bank-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--bank-navy); font-size: 23px; font-weight: 700; letter-spacing: .1px; white-space: nowrap; }
-.brand-mark { width: 37px; height: 37px; display: grid; place-items: center; border-radius: 50%; background: var(--bank-blue); color: white; }
+.bank-brand { display: inline-flex; align-items: center; gap: 10px; color: #fff; font-size: 23px; font-weight: 700; letter-spacing: .1px; white-space: nowrap; }
+.brand-mark { width: 37px; height: 37px; display: grid; place-items: center; border-radius: 50%; background: var(--bank-blue); color: var(--bank-navy); }
 .brand-bank { margin-left: 4px; color: var(--bank-blue); font-weight: 500; }
 .desktop-nav { display: flex; align-items: center; justify-content: space-between; flex: 1; gap: 21px; }
-.nav-link { position: relative; min-height: 76px; padding: 0; border: 0; background: transparent; color: #243b4b; font-size: 14px; font-weight: 500; white-space: nowrap; cursor: pointer; }
+.nav-link { position: relative; min-height: 76px; padding: 0; border: 0; background: transparent; color: #e2e8f0; font-size: 14px; font-weight: 500; white-space: nowrap; cursor: pointer; }
 .nav-link::after { position: absolute; right: 0; bottom: 0; left: 0; height: 3px; background: var(--bank-blue); content: ''; transform: scaleX(0); transition: transform 180ms ease; }
 .nav-link:hover { color: var(--bank-blue); }
 .nav-link:hover::after { transform: scaleX(1); }
 .mobile-actions { display: none; align-items: center; gap: 16px; }
-.icon-button { width: 40px; height: 40px; display: grid; place-items: center; border: 0; border-radius: 50%; background: transparent; color: var(--bank-navy); cursor: pointer; }
+.icon-button { width: 40px; height: 40px; display: grid; place-items: center; border: 0; border-radius: 50%; background: transparent; color: #fff; cursor: pointer; }
 .icon-button:hover { background: var(--bank-pale); color: var(--bank-blue); }
 .mobile-signin { display: inline-flex; align-items: center; gap: 9px; color: var(--bank-blue) !important; font-size: 12px; font-weight: 700; text-transform: uppercase; white-space: nowrap; }
 .search-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 200ms ease; border-top: 1px solid transparent; }
-.search-panel > form { min-height: 0; overflow: hidden; max-width: 1136px; width: calc(100% - 64px); margin: 0 auto; display: flex; align-items: center; gap: 12px; color: var(--bank-muted); }
+.search-panel > form { min-height: 0; overflow: hidden; max-width: 1136px; width: calc(100% - 64px); margin: 0 auto; display: flex; align-items: center; gap: 12px; color: #e2e8f0; }
 .search-panel.is-open { grid-template-rows: 1fr; border-top-color: var(--bank-border); }
 .search-panel.is-open > form { min-height: 64px; }
-.search-panel input { flex: 1; min-width: 0; border: 0; color: var(--bank-navy); background: transparent; }
+.search-panel input { flex: 1; min-width: 0; border: 0; color: #fff; background: transparent; }
 .search-panel form button { border: 0; background: transparent; color: var(--bank-blue); font-weight: 600; cursor: pointer; }
 .mobile-nav-panel { display: none; }
 
@@ -151,11 +152,11 @@
 .support-card-button-primary { background: var(--bank-blue); color: #fff !important; }
 .support-card-button-primary:hover { background: var(--bank-deep-blue); }
 .support-card-button-outline:hover { background: var(--bank-blue); color: #fff !important; }
-.bank-footer { background: linear-gradient(108deg, var(--bank-blue) 0%, #006bb8 48%, var(--bank-deep-blue) 100%); color: white; }
+.bank-footer { background: linear-gradient(108deg, var(--bank-navy) 0%, #1e293b 48%, var(--bank-navy) 100%); color: white; }
 .footer-main { width: min(1200px, calc(100% - 64px)); min-height: 276px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 45px; padding: 46px 0 38px; }
 .footer-brand .bank-brand { color: white; }
 .footer-brand .brand-bank { color: #b9e2ff; }
-.footer-brand .brand-mark { background: white; color: var(--bank-blue); }
+.footer-brand .brand-mark { background: var(--bank-blue); color: var(--bank-navy); }
 .footer-brand p { max-width: 240px; margin: 17px 0 0; color: #d5eaf7; font-size: 14px; }
 .footer-group { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; }
 .footer-group h2 { margin: 0 0 4px; font-size: 14px; font-weight: 700; }
@@ -187,7 +188,7 @@
   .mobile-nav-panel.is-open { grid-template-rows: 1fr; border-top-color: var(--bank-border); }
   .mobile-nav-panel.is-open > nav { padding-top: 9px; padding-bottom: 15px; }
   .mobile-nav-link,
-  .mobile-open-account { width: 100%; min-height: 46px; display: flex; align-items: center; justify-content: space-between; border: 0; border-bottom: 1px solid #edf0f2; background: transparent; color: var(--bank-navy); text-align: left; font-size: 14px; cursor: pointer; }
+  .mobile-open-account { width: 100%; min-height: 46px; display: flex; align-items: center; justify-content: space-between; border: 0; border-bottom: 1px solid #334155; background: transparent; color: #e2e8f0; text-align: left; font-size: 14px; cursor: pointer; }
   .mobile-nav-link:hover,
   .mobile-open-account { color: var(--bank-blue); }
   .search-panel > form { width: calc(100% - 44px); }

@@ -33,7 +33,7 @@ const HowItWorks = () => {
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Join thousands of users who've made the switch to smarter banking.
+            Preview a fictional finance interface created as a developer portfolio project.
           </p>
         </div>
 

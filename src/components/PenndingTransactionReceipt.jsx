@@ -21,7 +21,7 @@ const PendingTransactionReceipt = ({ type = 'transfer', formData = {}, onClose, 
 
   const handleCopy = async () => {
     const receiptText = `
-Federal Edge Finance - Transaction Receipt (Pending)
+Alturas Finance Demo - Simulated Transaction Receipt (Pending)
 Transaction ID: ${transactionId}
 Type: ${type === 'transfer' ? 'Money Transfer' : 'Withdrawal'}
 Date: ${timestamp}

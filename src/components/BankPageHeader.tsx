@@ -11,11 +11,8 @@ const navigation = ['Checking & Savings', 'Credit Cards', 'Loans', 'Mortgages', 
 
 function Brand() {
   return (
-    <Link to="/" className="bank-page-brand" aria-label="Bmo Bank home">
-      {/* <span className="bank-page-brand-mark" aria-hidden="true"><Landmark size={20} /></span>
-      <span>bmo<span>bank</span></span> */}
-
-      <img src="https://www.bmo.com/dist/images/logos/bmo-blue-on-transparent-en.svg" alt="Bmo Bank" width="100" height="40" />
+    <Link to="/" className="bank-page-brand" aria-label="Alturas Finance home">
+      <img src="/lg.jpg" alt="Alturas Finance logo" width="100" height="100" />
     </Link>
   );
 }

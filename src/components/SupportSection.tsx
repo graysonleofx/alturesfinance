@@ -52,8 +52,8 @@ const SupportSection = () => {
     });
     
     toast({
-      title: "Support Request Submitted",
-      description: "We've received your message and will respond within 24 hours.",
+      title: "Demo Interaction Complete",
+      description: "No support request was sent; this form is illustrative only.",
     });
   };
 
@@ -61,50 +61,29 @@ const SupportSection = () => {
     <div className="space-y-4 md:space-y-6">
       <div className="flex items-center space-x-2 mb-4">
         <HelpCircle className="h-5 w-5 md:h-6 md:w-6 text-primary" />
-        <h2 className="text-xl md:text-2xl font-bold">Customer Support</h2>
+        <h2 className="text-xl md:text-2xl font-bold">Get Support</h2>
       </div>
 
       {/* Contact Methods */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <Card className="text-center">
+        {/* <Card className="text-center">
           <CardContent className="p-4">
             <MessageCircle className="h-8 w-8 mx-auto mb-2 text-primary" />
-            <h3 className="font-semibold mb-1">Live Chat</h3>
+            <h3 className="font-semibold mb-1">Sample Chat</h3>
             <p className="text-sm text-muted-foreground mb-3">
-              Available 24/7
+              Demo only · no agents
             </p>
             <Button
               variant="outline"
               size="sm"
               className="w-full"
-              onClick={() => {
-                const chatUrl = 'https://direct.lc.chat/19380503/'; // replace with your actual chat route or external chat widget URL
-                const newWindow = window.open(chatUrl, '_blank', 'noopener,noreferrer,width=420,height=720');
-                if (newWindow) {
-                  try {
-                    newWindow.focus();
-                  } catch {}
-                  toast({
-                    title: 'Chat Started',
-                    description: 'A live chat window has been opened. Our agents will be with you shortly.',
-                  });
-                } else {
-                  // Popup blocked — fallback to navigating in current tab
-                  toast({
-                    title: 'Popup Blocked',
-                    description: 'Please allow popups or click OK to open chat in this tab.',
-                    variant: 'destructive',
-                  });
-                  // fallback navigation
-                  window.location.href = chatUrl;
-                }
-              }}
-              aria-label="Start live chat"
+              disabled
+              aria-label="Sample chat is disabled in this demo"
             >
-              Start Chat
+              Demo only
             </Button>
           </CardContent>
-        </Card>
+        </Card> */}
 
         {/* <Card className="text-center">
           <CardContent className="p-4">
@@ -157,14 +136,14 @@ const SupportSection = () => {
             <Mail className="h-8 w-8 mx-auto mb-2 text-primary" />
             <h3 className="font-semibold mb-1">Email Support</h3>
             <p className="text-sm text-muted-foreground mb-3">
-              customerservice@brno-bank.com
+              customerservice@alturesfinance.com
             </p>
             <Button
               variant="outline"
               size="sm"
               className="w-full"
               onClick={() => {
-                const mailto = 'mailto:customerservice@brno-bank.com';
+                const mailto = 'mailto:customerservice@alturesfinance.com';
                 window.location.href = mailto;
               }}
               aria-label="Send email"

@@ -40,24 +40,19 @@ const Referral = () => {
   };
 
   const shareViaWhatsApp = () => {
-    const message = `Join Smart Bank with my referral code ${referralCode} and we both get $5,000! Sign up at ${window.location.origin}/open-account`;
+    const message = `Explore the Alturas Finance developer UI demo and portfolio project: ${window.location.origin}`;
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const shareViaEmail = () => {
-    const subject = 'Join Federal Edge Finance and earn $5,000!';
-    const body = `Hi!
+    const subject = 'Explore the Alturas Finance UI demo';
+    const body = `Hi,
 
-      I'm inviting you to join Federal Edge Finance - Nigeria's smartest digital banking platform.
+I'm sharing the Alturas Finance developer UI demo and portfolio project.
 
-    Use my referral code: ${referralCode}
-
-    When you sign up and make your first deposit, we both get $5,000 credited to our accounts instantly!
-
-    Sign up here: ${window.location.origin}/open-account
-
-    Thanks!`;
+Explore it here: ${window.location.origin}
+No real accounts, payments, or financial services are offered.`;
     const mailtoUrl = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoUrl);
   };
@@ -71,16 +66,14 @@ const Referral = () => {
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold">
-            Refer & Earn{' '}
+            Share the{' '}
             <span className="text-transparent bg-gradient-accent bg-clip-text">
-              $5,000
-            </span>{' '}
-            per Account
+              demo
+            </span>
           </h2>
           
           <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
-            Share Federal Edge Finance with your friends and family. For every successful referral, 
-            both you and your friend get $5,000 credited to your accounts instantly.
+            Share this developer UI demo and portfolio project. It is not a bank and does not provide real financial services.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-12">
@@ -88,24 +81,24 @@ const Referral = () => {
               <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-4">
                 <Users className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Share Your Link</h3>
-              <p className="text-white/80">Send your unique referral link to friends</p>
+              <h3 className="text-lg font-semibold mb-2">Share the project</h3>
+              <p className="text-white/80">Send the demo link to friends</p>
             </div>
             
             <div className="text-center">
               <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-4">
                 <ArrowRight className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Friend Signs Up</h3>
-              <p className="text-white/80">They create an account and make their first deposit</p>
+              <h3 className="text-lg font-semibold mb-2">Explore the interface</h3>
+              <p className="text-white/80">Preview the fictional finance experience</p>
             </div>
             
             <div className="text-center">
               <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-4">
                 <Gift className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">Both Get Rewarded</h3>
-              <p className="text-white/80">$5,000 credited to both accounts instantly</p>
+              <h3 className="text-lg font-semibold mb-2">No real products</h3>
+              <p className="text-white/80">No accounts, deposits, or rewards are involved</p>
             </div>
           </div>
 
@@ -118,12 +111,12 @@ const Referral = () => {
                   className="text-lg px-8 py-6"
                   onClick={generateReferralCode}
                 >
-                  Get My Referral Code
+                  Get Demo Share Code
                 </Button>
               </DialogTrigger>
               <DialogContent className="sm:max-w-md">
                 <DialogHeader>
-                  <DialogTitle className="text-center">Your Referral Code</DialogTitle>
+                  <DialogTitle className="text-center">Your Demo Share Code</DialogTitle>
                 </DialogHeader>
                 <div className="space-y-6">
                   <div className="text-center">

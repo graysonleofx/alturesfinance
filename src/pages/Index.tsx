@@ -93,10 +93,9 @@ const featureSets: Record<string, Feature[]> = {
 
 function Brand() {
   return (
-    <Link to="/" className="bank-brand" aria-label="Northline Bank home">
-      {/* <span className="brand-mark" aria-hidden="true"><Landmark size={21} strokeWidth={2.2} /></span>
-      <span>northline<span className="brand-bank">bank</span></span> */}
-      <img src="https://www.bmo.com/dist/images/logos/bmo-blue-on-transparent-en.svg" alt="Northline Bank" width="100" height="40" />
+    <Link to="/" className="bank-brand" aria-label="Alturas Finance home">
+      {/* <span className="brand-mark" aria-hidden="true"><Landmark size={21} strokeWidth={2.2} /></span> */}
+      <img src="/lg.jpg" alt="Alturas Finance logo" width="100" height="100" />
     </Link>
   );
 }
@@ -107,7 +106,6 @@ function UtilityBar({ onSearch }: { onSearch: () => void }) {
       <button className="utility-personal" type="button">Personal <ChevronDown size={15} aria-hidden="true" /></button>
       <div className="utility-actions">
         <button className="icon-button utility-search" type="button" onClick={onSearch} aria-label="Open search"><Search size={19} /></button>
-        <button className="utility-country" type="button" aria-label="Country and language: United States">🇺🇸 <ChevronDown size={14} aria-hidden="true" /></button>
         <Link to="/login" className="utility-signin"><LockKeyhole size={16} aria-hidden="true" /> Sign in <ChevronDown size={15} aria-hidden="true" /></Link>
       </div>
     </div>
@@ -148,7 +146,7 @@ function BankHeader({ activeCategory, onCategoryChange }: { activeCategory: stri
       <div className={`search-panel${searchOpen ? ' is-open' : ''}`} aria-hidden={!searchOpen}>
         <form role="search" onSubmit={(event) => event.preventDefault()}>
           <Search size={18} aria-hidden="true" />
-          <input aria-label="Search Northline Bank" placeholder="What can we help you find?" tabIndex={searchOpen ? 0 : -1} />
+          <input aria-label="Search Alturas Finance demo" placeholder="What can we help you find?" tabIndex={searchOpen ? 0 : -1} />
           <button type="button" onClick={() => setSearchOpen(false)} tabIndex={searchOpen ? 0 : -1}>Close</button>
         </form>
       </div>
@@ -163,18 +161,18 @@ function BankHeader({ activeCategory, onCategoryChange }: { activeCategory: stri
 }
 
 function SecurityStrip() {
-  return <div className="security-strip"><ShieldCheck size={19} aria-hidden="true" /><span><strong>Banking built on trust</strong><span className="security-divider">—</span> Eligible deposits are protected in accordance with applicable laws, regulations, and coverage limits.</span></div>;
+  return <div className="security-strip"><ShieldCheck size={19} aria-hidden="true" /><span><strong>Developer UI Demo</strong><span className="security-divider">—</span> Portfolio project only; no real accounts, deposits, or financial services.</span></div>;
 }
 
 function HeroBanner() {
   return (
     <section className="hero-banner" aria-labelledby="hero-title">
       <div className="hero-copy">
-        <span className="eyebrow">A little more room to grow</span>
-        <h1 id="hero-title">Earn up to $600 cash bonus<sup>*</sup></h1>
-        <p className="hero-description">Open a new personal checking account and earn up to a $600 cash bonus.*</p>
-        <p className="hero-disclaimer">*With qualifying activities. Conditions apply.</p>
-        <Link className="outline-button" to="/open-account">Learn more <ArrowRight size={17} aria-hidden="true" /></Link>
+        <span className="eyebrow">A developer-built portfolio project</span>
+        <h1 id="hero-title">A clearer view of your finances</h1>
+        <p className="hero-description">Explore the Alturas Finance interface concept, created to showcase product design and frontend development.</p>
+        <p className="hero-disclaimer">All balances, transactions, and financial products shown are illustrative.</p>
+        <Link className="outline-button" to="/open-account">Explore the demo <ArrowRight size={17} aria-hidden="true" /></Link>
       </div>
       <div className="hero-image-wrap">
         <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=85" alt="Colleagues planning together in a bright modern workspace" />
@@ -201,7 +199,7 @@ function FeatureCard({ feature }: { feature: Feature }) {
   return (
     <article className={`feature-card feature-${feature.style}`}>
       {feature.style === 'photo' ? (
-        <div className="feature-photo"><img src={feature.image ?? 'https://www.bmo.com/dam_asset/transform/00d40e12-3…ceb-ai-hp-tile-en-desktop?format=webp&quality=100'} alt={feature.imageAlt ?? 'Family enjoying time together outdoors'} /></div>
+        <div className="feature-photo"><img src={feature.image ?? 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=900&q=85'} alt={feature.imageAlt ?? 'Family enjoying time together outdoors'} /></div>
       ) : <div className="feature-icon"><Icon size={39} strokeWidth={1.5} aria-hidden="true" /></div>}
       <div className="feature-content">
         <h3>{feature.title}</h3>
@@ -228,8 +226,7 @@ function Footer() {
         <div className="footer-brand"><Brand /><p>Good banking starts with a little more clarity.</p></div>
         {footerGroups.map((group) => <div className="footer-group" key={group.title}><h2>{group.title}</h2>{group.links.map((link) => <a href="#banking-categories" key={link}>{link}</a>)}</div>)}
       </div>
-      <div className="footer-bottom"><p>BMO Bank is a regulated financial institution providing secure banking and financial services to its customers. All accounts, transactions, and financial services are subject to applicable laws, regulatory requirements, and the institution’s terms and conditions.
-      </p><span>{`© ${new Date().getFullYear()} Bmo Bank. All rights reserved.`}</span></div>
+      {/* <div className="footer-bottom"><p>Alturas Finance is a developer UI demo and portfolio project, not a financial institution. No real accounts, transactions, deposits, or financial services are offered.</p><span>Alturas Finance · Portfolio project</span></div> */}
     </footer>
   );
 }
@@ -240,7 +237,7 @@ const Index = () => {
   return (
     <div className="bank-home">
       <BankHeader activeCategory={activeCategory} onCategoryChange={setActiveCategory} />
-      <SecurityStrip />
+      {/* <SecurityStrip /> */}
       <main>
         <div className="page-width">
           <HeroBanner />
@@ -258,14 +255,14 @@ const Index = () => {
             <div className="support-links">
               <article className="support-card">
                 <Laptop className="support-card-icon" size={52} strokeWidth={1.45} aria-hidden="true" />
-                <h3>Bmo Bank online support</h3>
+                <h3>Alturas Finance demo support</h3>
                 <p>Get help with your questions using our online support options.</p>
                 <Link className="support-card-button support-card-button-primary" to="/contact">Get support</Link>
               </article>
               <article className="support-card">
                 <MapPin className="support-card-icon" size={52} strokeWidth={1.45} aria-hidden="true" />
                 <h3>Contact our team</h3>
-                <p>Reach out to our team for help and information about Bmo Bank.</p>
+                <p>Explore the support interface included in this portfolio project.</p>
                 <Link className="support-card-button support-card-button-outline" to="/contact">Contact us</Link>
               </article>
             </div>

@@ -162,51 +162,50 @@ const ProfileSection = ({ userSession }) => {
   const handleSave = async () => {
     setIsSaving(true);
 
-    // First fetch the actual row to get the DB id
-    const { data: row, error: fetchError } = await supabase
-      .from("accounts")
-      .select("id")
-      .eq("email", profileData.email)
-      .single();
+    try {
+      const { data: { user }, error: authError } = await supabase.auth.getUser();
+      if (authError || !user) {
+        toast({
+          title: "Unable to update profile",
+          description: authError?.message || "Please sign in again and retry.",
+        });
+        return;
+      }
 
-    if (fetchError || !row) {
-      toast({
-        title: "User not found",
-        description: "Could not find your profile in database.",
-      });
-      setIsSaving(false);
-      return;
-    }
+      const { error } = await supabase
+        .from("accounts")
+        .update({
+          full_name: profileData.fullName,
+          phone: profileData.phone,
+          address: profileData.address,
+          date_of_birth: profileData.dateOfBirth,
+          occupation: profileData.occupation
+        })
+        .eq("id", user.id)
+        .select("id")
+        .single();
 
-    const userId = row.id;
+      if (error) {
+        toast({
+          title: "Error Updating Profile",
+          description: error.message,
+        });
+        return;
+      }
 
-    // Now update using the correct id
-    const { error } = await supabase
-      .from("accounts")
-      .update({
-        full_name: profileData.fullName,
-        email: profileData.email,
-        phone: profileData.phone,
-        address: profileData.address,
-        date_of_birth: profileData.dateOfBirth,
-        occupation: profileData.occupation
-      })
-      .eq("id", userId);
-
-    if (error) {
-      toast({
-        title: "Error Updating Profile",
-        description: error.message,
-      });
-    } else {
       toast({
         title: "Profile Updated",
         description: "Your profile information has been successfully saved.",
       });
       setIsEditing(false);
+    } catch (error) {
+      toast({
+        title: "Error Updating Profile",
+        description: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    } finally {
+      setIsSaving(false);
     }
-
-    setIsSaving(false);
   };
 
 
@@ -282,10 +281,14 @@ const ProfileSection = ({ userSession }) => {
                 id="email"
                 type="email"
                 value={profileData.email}
-                onChange={(e) => handleInputChange('email', e.target.value)}
-                disabled={!isEditing}
-                className={!isEditing ? 'bg-muted/30' : ''}
+                disabled
+                className="bg-muted/30"
               />
+              {isEditing && (
+                <p className="mt-1 text-xs text-muted-foreground">
+                  Sign-in email cannot be changed from profile settings.
+                </p>
+              )}
             </div>
 
             <div>

@@ -1,5 +1,5 @@
 -- ============================================
--- BMO BANKING SUPABASE DATABASE SETUP
+-- ALTURAS FINANCE DEVELOPER UI DEMO DATABASE SETUP
 -- Fresh-project setup; no existing rows are deleted.
 -- Do not run this as an upgrade over a different schema without reviewing it first.
 -- User-facing balance/ledger mutations must use the RPCs below; direct table writes are denied.
@@ -894,18 +894,18 @@ drop policy if exists "Users can read own transactions" on public.transactions;
 drop policy if exists "Users can create own pending deposit transaction" on public.transactions;
 drop policy if exists "Admins can manage transactions" on public.transactions;
 
-drop policy if exists "BMO accounts select own or admin" on public.accounts;
-drop policy if exists "BMO accounts insert own zero-balance" on public.accounts;
-drop policy if exists "BMO accounts update own profile" on public.accounts;
-drop policy if exists "BMO admins update safe account fields" on public.accounts;
-drop policy if exists "BMO deposits select own or admin" on public.deposits;
-drop policy if exists "BMO transactions select own or admin" on public.transactions;
+drop policy if exists "Alturas Finance accounts select own or admin" on public.accounts;
+drop policy if exists "Alturas Finance accounts insert own zero-balance" on public.accounts;
+drop policy if exists "Alturas Finance accounts update own profile" on public.accounts;
+drop policy if exists "Alturas Finance admins update safe account fields" on public.accounts;
+drop policy if exists "Alturas Finance deposits select own or admin" on public.deposits;
+drop policy if exists "Alturas Finance transactions select own or admin" on public.transactions;
 
-create policy "BMO accounts select own or admin"
+create policy "Alturas Finance accounts select own or admin"
 on public.accounts for select to authenticated
 using (id = auth.uid() or public.is_admin());
 
-create policy "BMO accounts insert own zero-balance"
+create policy "Alturas Finance accounts insert own zero-balance"
 on public.accounts for insert to authenticated
 with check (
   id = auth.uid()
@@ -917,21 +917,21 @@ with check (
   and balance = 0
 );
 
-create policy "BMO accounts update own profile"
+create policy "Alturas Finance accounts update own profile"
 on public.accounts for update to authenticated
 using (id = auth.uid())
 with check (id = auth.uid() and role = 'user' and status = 'active');
 
-create policy "BMO admins update safe account fields"
+create policy "Alturas Finance admins update safe account fields"
 on public.accounts for update to authenticated
 using (public.is_admin())
 with check (public.is_admin());
 
-create policy "BMO deposits select own or admin"
+create policy "Alturas Finance deposits select own or admin"
 on public.deposits for select to authenticated
 using (user_id = auth.uid() or public.is_admin());
 
-create policy "BMO transactions select own or admin"
+create policy "Alturas Finance transactions select own or admin"
 on public.transactions for select to authenticated
 using (user_id = auth.uid() or public.is_admin());
 
@@ -949,18 +949,18 @@ set name = excluded.name,
 drop policy if exists "Users upload own cheque images" on storage.objects;
 drop policy if exists "Users read own cheque images" on storage.objects;
 drop policy if exists "Users replace own cheque images" on storage.objects;
-drop policy if exists "BMO users upload own cheque images" on storage.objects;
-drop policy if exists "BMO users read own or admin cheque images" on storage.objects;
-drop policy if exists "BMO users delete own cheque images" on storage.objects;
+drop policy if exists "Alturas Finance users upload own cheque images" on storage.objects;
+drop policy if exists "Alturas Finance users read own or admin cheque images" on storage.objects;
+drop policy if exists "Alturas Finance users delete own cheque images" on storage.objects;
 
-create policy "BMO users upload own cheque images"
+create policy "Alturas Finance users upload own cheque images"
 on storage.objects for insert to authenticated
 with check (
   bucket_id = 'cheque-images'
   and (storage.foldername(name))[1] = auth.uid()::text
 );
 
-create policy "BMO users read own or admin cheque images"
+create policy "Alturas Finance users read own or admin cheque images"
 on storage.objects for select to authenticated
 using (
   bucket_id = 'cheque-images'
@@ -968,7 +968,7 @@ using (
 );
 
 -- Allows the form to clean up files when its database submission fails.
-create policy "BMO users delete own cheque images"
+create policy "Alturas Finance users delete own cheque images"
 on storage.objects for delete to authenticated
 using (
   bucket_id = 'cheque-images'

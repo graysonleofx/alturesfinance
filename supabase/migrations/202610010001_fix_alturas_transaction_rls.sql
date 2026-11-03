@@ -84,14 +84,14 @@ grant execute on function public.submit_cheque_deposit(uuid, numeric, text, text
 
 drop policy if exists "Users can read own transactions" on public.transactions;
 drop policy if exists "Users can create own pending deposit transaction" on public.transactions;
-drop policy if exists "BMO transactions select own or admin" on public.transactions;
+drop policy if exists "Alturas Finance transactions select own or admin" on public.transactions;
 
-create policy "BMO transactions select own or admin"
+create policy "Alturas Finance transactions select own or admin"
 on public.transactions for select to authenticated
 using (user_id = auth.uid() or public.is_admin());
 
-drop policy if exists "BMO users delete own cheque images" on storage.objects;
-create policy "BMO users delete own cheque images"
+drop policy if exists "Alturas Finance users delete own cheque images" on storage.objects;
+create policy "Alturas Finance users delete own cheque images"
 on storage.objects for delete to authenticated
 using (
 	bucket_id = 'cheque-images'

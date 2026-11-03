@@ -155,13 +155,13 @@ const Login = () => {
   }, [])
 
   return (
-    <div className="northline-page">
+    <div className="alturas-page">
       <BankPageHeader page="login" />
-      <main className="northline-page-content northline-auth-layout">
-          <Card className="northline-auth-panel">
+      <main className="alturas-page-content alturas-auth-layout">
+          <Card className="alturas-auth-panel">
             <CardHeader className="text-center">
               <CardTitle className="text-2xl text-primary">Welcome Back</CardTitle>
-              <CardDescription>Sign in to your BMO Bank account</CardDescription>
+              <CardDescription>Sign in to the Alturas Finance</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={ (e) => {
@@ -205,12 +205,12 @@ const Login = () => {
                   </div>
                 </div>
 
-                <div className="northline-security-note flex items-center space-x-2 text-sm text-muted-foreground bg-secondary p-3 rounded-lg">
+                <div className="alturas-security-note flex items-center space-x-2 text-sm text-muted-foreground bg-secondary p-3 rounded-lg">
                   <Lock className="w-4 h-4" />
                   <span>Your connection is encrypted and secure</span>
                 </div>
 
-                <Button type="submit" variant="hero" className="northline-primary-button w-full" size="lg" id="login-button">
+                <Button type="submit" variant="hero" className="alturas-primary-button w-full" size="lg" id="login-button">
                   Log In Securely
                 </Button>
               </form>
@@ -228,7 +228,7 @@ const Login = () => {
                   </p>
                   <Button 
                     variant="outline" 
-                    className="northline-outline-button w-full"
+                    className="alturas-outline-button w-full"
                     onClick={() => navigate('/open-account')}
                   >
                     Create Account

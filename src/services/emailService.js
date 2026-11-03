@@ -96,7 +96,7 @@ export const sendTransactionSuccessEmail = async (transactionData) => {
   }
 
   const transactionId = templateParams.transaction_id;
-  const storageKey = `bmo:transaction-email-attempted:${transactionId}`;
+  const storageKey = `alturas-finance:transaction-email-attempted:${transactionId}`;
 
   if (attemptedTransactionIds.has(transactionId)) {
     return Promise.resolve({ skipped: true });

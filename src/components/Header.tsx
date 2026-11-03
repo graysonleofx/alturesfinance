@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Shield } from 'lucide-react';
-import brand from '@/assets/bank.png';
+import { Menu, X, Shield, Landmark } from 'lucide-react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
@@ -77,12 +76,11 @@ const Header = () => {
           <div className="flex items-center">
             <div className="flex items-center space-x-3 group cursor-pointer" onClick={() => handleSmoothScroll('#home')}>
               <div className="relative">
-                {/* <div className="h-8 w-8 rounded-lg bg-gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-                  <Shield className="w-4 h-4 text-white" />
-                </div> */}
-                <img src={brand} alt="Bank Logo" className="w-16 h-14 rounded-lg bg-slate-200" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent text-accent-foreground group-hover:scale-110 transition-transform duration-200">
+                  <Landmark className="h-5 w-5" aria-hidden="true" />
+                </div>
               </div>
-              <span className="text-xl font-bold text-primary group-hover:text-primary/80 transition-colors">Federal Edge Finance</span>
+              <span className="text-xl font-bold text-primary group-hover:text-primary/80 transition-colors">Alturas Finance</span>
             </div>
           </div>
 

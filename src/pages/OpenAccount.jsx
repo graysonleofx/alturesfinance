@@ -165,20 +165,20 @@ const OpenAccount = () => {
 
   if (accountCreated) {
     return (
-      <div className="northline-page">
+      <div className="alturas-page">
         <BankPageHeader page="signup" />
-        <main className="northline-page-content northline-auth-layout">
-            <Card className="northline-success-panel text-center">
+        <main className="alturas-page-content alturas-auth-layout">
+            <Card className="alturas-success-panel text-center">
               <CardHeader>
                 <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
                   <CheckCircle className="w-8 h-8 text-green-600" />
                 </div>
-                <CardTitle className="text-2xl text-primary">Welcome, {formData.fullName.split(' ')[0]}!</CardTitle>
-                <CardDescription>Your account has been successfully created</CardDescription>
+                <CardTitle className="text-2xl text-primary">Demo Profile Ready</CardTitle>
+                <CardDescription>No real financial account has been opened.</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="p-4 bg-secondary rounded-lg">
-                  <p className="text-sm text-muted-foreground mb-2">Your Account Number</p>
+                  <p className="text-sm text-muted-foreground mb-2">Sample Account ID</p>
                   <p className="text-2xl font-bold text-primary">{generatedAccountNumber}</p>
                 </div>
                 <Button onClick={proceedToDashboard} className="w-full" size="lg">
@@ -192,13 +192,13 @@ const OpenAccount = () => {
   }
 
   return (
-    <div className="northline-page">
+    <div className="alturas-page">
       <BankPageHeader page="signup" />
-      <main className="northline-page-content northline-auth-layout">
-          <Card className="northline-auth-panel">
+      <main className="alturas-page-content alturas-auth-layout">
+          <Card className="alturas-auth-panel">
             <CardHeader className="text-center">
-              <CardTitle className="text-2xl text-primary">Open Your Free Digital Account</CardTitle>
-              <CardDescription>Join thousands of users banking smart with us</CardDescription>
+              <CardTitle className="text-2xl text-primary">Create Your Profile</CardTitle>
+              <CardDescription>Create a profile on Alturas Finance and get started with our services.</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -328,12 +328,12 @@ const OpenAccount = () => {
                   </div>
                 </div>
 
-                <div className="northline-security-note flex items-center space-x-2 text-sm text-muted-foreground bg-secondary p-3 rounded-lg">
+                <div className="alturas-security-note flex items-center space-x-2 text-sm text-muted-foreground bg-secondary p-3 rounded-lg">
                   <Lock className="w-4 h-4" />
                   <span>Your details are encrypted and secure</span>
                 </div>
 
-                <Button type="submit" className="northline-primary-button w-full" size="lg" id="openAccountButton">
+                <Button type="submit" className="alturas-primary-button w-full" size="lg" id="openAccountButton">
                   Open Account
                 </Button>
               </form>

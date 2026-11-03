@@ -26,16 +26,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 25% 15%;
 
-    --primary: 211 100% 15%;
+    --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 210 17% 95%;
-    --secondary-foreground: 211 100% 15%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 17% 95%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 18 89% 57%;
+    --accent: 160.1 84.1% 39.2%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
@@ -43,25 +43,25 @@ All colors MUST be HSL.
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 211 100% 15%;
+    --ring: 222.2 47.4% 11.2%;
 
     /* Banking specific colors */
-    --banking-blue: 211 100% 15%;
-    --banking-blue-light: 211 100% 25%;
-    --banking-orange: 18 89% 57%;
-    --banking-orange-light: 18 89% 67%;
+    --banking-blue: 222.2 47.4% 11.2%;
+    --banking-blue-light: 217.2 32.6% 17.5%;
+    --banking-orange: 160.1 84.1% 39.2%;
+    --banking-orange-light: 160.1 84.1% 45%;
     --banking-gray: 210 17% 95%;
     --banking-gray-dark: 215 16% 47%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(211 100% 15%), hsl(211 100% 25%));
-    --gradient-hero: linear-gradient(135deg, hsl(211 100% 15%) 0%, hsl(211 100% 20%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(18 89% 57%), hsl(18 89% 67%));
+    --gradient-primary: linear-gradient(135deg, hsl(222.2 47.4% 11.2%), hsl(217.2 32.6% 17.5%));
+    --gradient-hero: linear-gradient(135deg, hsl(222.2 47.4% 11.2%) 0%, hsl(217.2 32.6% 17.5%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(160.1 84.1% 39.2%), hsl(160.1 84.1% 45%));
 
     /* Shadows */
-    --shadow-banking: 0 10px 25px -5px hsl(211 100% 15% / 0.1);
-    --shadow-card: 0 4px 6px -1px hsl(211 100% 15% / 0.1);
-    --shadow-glow: 0 0 40px hsl(211 100% 25% / 0.3);
+    --shadow-banking: 0 10px 25px -5px hsl(222.2 47.4% 11.2% / 0.1);
+    --shadow-card: 0 4px 6px -1px hsl(222.2 47.4% 11.2% / 0.1);
+    --shadow-glow: 0 0 40px hsl(217.2 32.6% 17.5% / 0.3);
 
     --radius: 0.5rem;
 
@@ -119,6 +119,15 @@ All colors MUST be HSL.
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+}
+
+.demo-banner {
+  padding: 8px 16px;
+  background: #10B981;
+  color: #0F172A;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
 }
 
 @layer base {

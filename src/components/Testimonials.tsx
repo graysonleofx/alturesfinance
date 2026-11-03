@@ -3,24 +3,24 @@ import { Star } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'Freelance Designer',
+      name: 'Sample Profile A',
+      role: 'Illustrative feedback',
       avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face',
-      content: 'Smart Bank has transformed how I handle my freelance payments. The instant notifications and seamless transfers make my life so much easier.',
+      content: 'The Alturas Finance demo showcases a clear, modern approach to finance product UI.',
       rating: 5,
     },
     {
-      name: 'Michael Chen',
-      role: 'Small Business Owner',
+      name: 'Sample Profile B',
+      role: 'Illustrative feedback',
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-      content: 'Finally, a bank that understands modern business needs. The virtual account feature is a game-changer for my e-commerce store.',
+      content: 'This example card demonstrates how testimonial content could be presented in a product interface.',
       rating: 5,
     },
     {
-      name: 'Priya Patel',
-      role: 'Tech Startup Founder',
+      name: 'Sample Profile C',
+      role: 'Illustrative feedback',
       avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
-      content: 'The security features and real-time analytics give me complete confidence in managing our startup funds. Highly recommended!',
+      content: 'This is placeholder content for the portfolio demo, not a real customer testimonial.',
       rating: 5,
     },
   ];
@@ -30,13 +30,13 @@ const Testimonials = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            What Our{' '}
+            Sample{' '}
             <span className="text-transparent bg-gradient-primary bg-clip-text">
-              Customers Say
+              Testimonials
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Join thousands of satisfied customers who've made the switch to smarter banking.
+            Illustrative content only. These are not real customer testimonials.
           </p>
         </div>
 

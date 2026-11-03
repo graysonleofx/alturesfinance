@@ -5,8 +5,8 @@ import SupportManager from '../assets/CS.jpg';
 
 const coreValues = [
   {
-    title: 'Security',
-    desc: 'Bank-grade encryption, strict access controls and continuous monitoring to protect customer data.',
+    title: 'Safety Concepts',
+    desc: 'Illustrative safety messaging for a fictional finance interface; no security certification is implied.',
     icon: (
       <svg className="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" aria-hidden>
         <path d="M12 1l9 4v6c0 6-3.8 11-9 12-5.2-1-9-6-9-12V5l9-4z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -16,7 +16,7 @@ const coreValues = [
   },
   {
     title: 'Innovation',
-    desc: 'Modern APIs and frictionless UX that let customers move faster and build on our platform.',
+    desc: 'Example interface patterns and interactions created for a frontend portfolio project.',
     icon: (
       <svg className="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" aria-hidden>
         <path d="M12 2v6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -26,7 +26,7 @@ const coreValues = [
   },
   {
     title: 'Transparency',
-    desc: 'Clear fees, simple terms, and proactive communication you can rely on.',
+    desc: 'Clear demo labels and illustrative content make the project purpose easy to understand.',
     icon: (
       <svg className="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" aria-hidden>
         <path d="M3 12h18" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -35,8 +35,8 @@ const coreValues = [
     )
   },
   {
-    title: 'Customer Focus',
-    desc: 'Design and support centered around real customer needs — fast help, clear options, empathy.',
+    title: 'Usable Design',
+    desc: 'A responsive interface concept focused on clear navigation and accessible components.',
     icon: (
       <svg className="w-7 h-7 text-primary" viewBox="0 0 24 24" fill="none" aria-hidden>
         <circle cx="12" cy="8" r="3" stroke="currentColor" strokeWidth="1.2"/>
@@ -47,9 +47,9 @@ const coreValues = [
 ];
 
 const team = [
-  { name: 'Jeff T. Ruiz', title: 'Chief Technology Officer', img: CTO, alt: 'Jeff T. Ruiz portrait' },
-  { name: 'Alexandria H. Chandler', title: 'Head of Marketing', img: MarketingHead, alt: 'Alexandria H. Chandler portrait' },
-  { name: 'Kendall C. Marty', title: 'Customer Support Manager', img: SupportManager, alt: 'Kendall C. Marty portrait' }
+  { name: 'Sample Profile A', title: 'Example product role', img: CTO, alt: 'Illustrative profile photo' },
+  { name: 'Sample Profile B', title: 'Example design role', img: MarketingHead, alt: 'Illustrative profile photo' },
+  { name: 'Sample Profile C', title: 'Example support role', img: SupportManager, alt: 'Illustrative profile photo' }
 ];
 
 const AboutUs = () => {
@@ -64,14 +64,14 @@ const AboutUs = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/80 pointer-events-none w-full shadow-lg" />
             <div className="grid grid-cols-1 lg:grid-cols-2 ">
               <div className="p-6 sm:p-4 lg:p-16 flex flex-col justify-center gap-6">
-                <span className="inline-block text-xs font-semibold uppercase text-primary/90 bg-primary/10 px-3 py-1 rounded-full">About Us</span>
+                <span className="inline-block text-xs font-semibold uppercase text-primary/90 bg-primary/10 px-3 py-1 rounded-full">About the Project</span>
 
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight max-w-2xl">
-                  Banking built for people — secure, simple and human-centered
+                  A fictional finance interface built as a developer portfolio demo
                 </h1>
 
                 <p className="text-sm sm:text-base text-muted-foreground max-w-prose leading-relaxed">
-                  Since 2020 we've built straightforward financial tools with enterprise-grade security and a focus on clarity. We design products that help customers manage money with confidence.
+                  Alturas Finance is a UI concept created to showcase frontend development and product design. It is not a real bank, and it does not offer financial services.
                 </p>
 
                 <div className="flex flex-col sm:flex-row sm:items-center gap-3">
@@ -91,16 +91,16 @@ const AboutUs = () => {
 
                 <div className="mt-4 flex flex-col sm:flex-row items-center gap-6">
                   <div className="flex items-baseline gap-2">
-                    <div className="text-2xl sm:text-3xl font-bold text-slate-900">99.99%</div>
-                    <div className="text-xs text-muted-foreground">uptime</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-slate-900">UI</div>
+                    <div className="text-xs text-muted-foreground">demo project</div>
                   </div>
                   <div className="flex items-baseline gap-2">
-                    <div className="text-2xl sm:text-3xl font-bold text-slate-900">24/7</div>
-                    <div className="text-xs text-muted-foreground">support</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-slate-900">Sample</div>
+                    <div className="text-xs text-muted-foreground">illustrative data</div>
                   </div>
                   <div className="flex items-baseline gap-2">
-                    <div className="text-2xl sm:text-3xl font-bold text-slate-900">2020</div>
-                    <div className="text-xs text-muted-foreground">founded</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-slate-900">No</div>
+                    <div className="text-xs text-muted-foreground">real services</div>
                   </div>
                 </div>
               </div>
@@ -116,12 +116,12 @@ const AboutUs = () => {
 
                 <div className="absolute left-0 right-0 bottom-6">	
                   <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 sm:p-6 shadow-lg border border-slate-100">
-                    <h4 className="text-sm sm:text-base font-semibold text-slate-900">What sets us apart</h4>
+                    <h4 className="text-sm sm:text-base font-semibold text-slate-900">Demo project</h4>
                     <p className="mt-1 text-xs sm:text-sm text-muted-foreground">
-                      Human-centered products, transparent pricing, and engineers who put privacy first.
+                      A fictional product interface created for a developer portfolio.
                     </p>
                     <div className="mt-3 flex gap-3">
-                      <a className="text-xs inline-flex items-center px-3 py-1 rounded-md bg-primary/10 text-primary hover:bg-primary/20 transition" href="#contact">Talk to sales</a>
+                      <a className="text-xs inline-flex items-center px-3 py-1 rounded-md bg-primary/10 text-primary hover:bg-primary/20 transition" href="#contact">                      Project overview</a>
                       <a className="text-xs inline-flex items-center px-3 py-1 rounded-md border border-slate-200 text-slate-700 hover:bg-slate-50 transition" href="#values">See values</a>
                     </div>
                   </div>
@@ -142,111 +142,95 @@ const AboutUs = () => {
           >
             <div className="flex flex-col lg:flex-row gap-8">
               <div className="flex-1">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-3">Our History</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-3">Project Background</h2>
 
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-prose mb-4">
-                  Founded in 2020, we began as a small team of engineers and designers who shared a simple conviction:
-                  banking should be straightforward, secure, and designed around real people. In the early months we focused
-                  on building a reliable core — secure account infrastructure, clear user flows and a support-first culture.
-                  That foundation allowed us to move quickly while remaining rigorous about privacy and compliance.
+                  Alturas Finance is a fictional finance-product concept built as a developer UI demo and portfolio project.
+                  The interface explores familiar account, activity, and support patterns without representing a real company
+                  or financial institution.
                 </p>
 
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 max-w-prose">
-                  As we grew, our priorities stayed consistent: reduce friction for customers, communicate clearly, and
-                  continuously strengthen security. We iterated rapidly on product feedback, launched a modern mobile app,
-                  and opened APIs to partners who wanted to embed our payments and accounts into their experiences.
-                  Through every release we emphasized observability, automated testing and threat modeling so growth never
-                  outpaced safety.
+                  The project focuses on responsive layouts, reusable React components, and clear interface states. All
+                  account balances, profile cards, and transaction examples are illustrative UI content.
                 </p>
 
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 max-w-prose">
-                  Our culture has always been customer-first. Beyond product features, we invested early in 24/7 support,
-                  transparent policies, and education — because financial confidence is about both the tools and the trust
-                  that surrounds them. That approach helped us win long-term customers and meaningful integrations with
-                  businesses that rely on predictable, private, and auditable systems.
+                  Forms and simulated interactions demonstrate common product flows only. Do not enter real credentials,
+                  personal information, or payment details.
                 </p>
 
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-prose">
-                  Today, we balance ambitious product work with enterprise-grade reliability. We continue to expand our
-                  engineering and security teams, collaborate with industry partners, and iterate on experiences that make
-                  managing money easier for millions of people. Looking forward, our roadmap centers on interoperability,
-                  better developer tooling, and accessible features that serve a wide range of customers — from individuals
-                  to large organizations.
+                  No accounts, payments, deposits, insurance, or financial support services are provided. The project is
+                  presented solely as a portfolio demonstration of interface design and frontend implementation.
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">Security-first</span>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">API-ready</span>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">Customer-first</span>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">Reliability</span>
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">Responsive UI</span>
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">React components</span>
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">Sample data</span>
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs">Portfolio project</span>
                 </div>
               </div>
 
               <div className="w-full lg:w-1/3">
                 <ul className="space-y-6">
                   <li className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center font-semibold text-primary text-sm">2020</div>
+                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center font-semibold text-primary text-sm">01</div>
                     <div>
-                      <div className="text-sm font-medium text-slate-900">Founding & First Launch</div>
+                      <div className="text-sm font-medium text-slate-900">Finance UI Concept</div>
                       <div className="mt-1 text-sm text-muted-foreground">
-                        Launched our initial online accounts and payments platform, prioritized simple onboarding and
-                        a small set of high-quality features to validate product-market fit.
+                        Defined a fictional product brief and a set of common finance-interface screens for the demo.
                       </div>
                     </div>
                   </li>
 
                   <li className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center font-semibold text-primary text-sm">2021</div>
+                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center font-semibold text-primary text-sm">02</div>
                     <div>
-                      <div className="text-sm font-medium text-slate-900">Early Growth & Partnerships</div>
+                      <div className="text-sm font-medium text-slate-900">Responsive Layouts</div>
                       <div className="mt-1 text-sm text-muted-foreground">
-                        Expanded customer base, established first partner integrations, and built out 24/7 support channels
-                        to ensure customers always had direct access to help.
+                        Adapted the concept for desktop and mobile screen sizes with reusable layout patterns.
                       </div>
                     </div>
                   </li>
 
                   <li className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center font-semibold text-primary text-sm">2022</div>
+                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center font-semibold text-primary text-sm">03</div>
                     <div>
-                      <div className="text-sm font-medium text-slate-900">Mobile App & Developer APIs</div>
+                      <div className="text-sm font-medium text-slate-900">Interaction Patterns</div>
                       <div className="mt-1 text-sm text-muted-foreground">
-                        Released a polished mobile experience and public APIs to enable partners and developers to build on top
-                        of our platform, with clear docs and stable SDKs.
+                        Added sample navigation, form states, and illustrative account activity for UI demonstration.
                       </div>
                     </div>
                   </li>
 
                   <li className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center font-semibold text-primary text-sm">2023</div>
+                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center font-semibold text-primary text-sm">04</div>
                     <div>
-                      <div className="text-sm font-medium text-slate-900">Security & Compliance Milestones</div>
+                      <div className="text-sm font-medium text-slate-900">Visual System</div>
                       <div className="mt-1 text-sm text-muted-foreground">
-                        Implemented advanced security controls, attained important compliance certifications, and introduced
-                        continuous monitoring and incident response practices to serve enterprise customers.
+                        Applied a slate navy and emerald palette with consistent typography and component styling.
                       </div>
                     </div>
                   </li>
 
                   <li className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center font-semibold text-primary text-sm">2024</div>
+                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center font-semibold text-primary text-sm">05</div>
                     <div>
-                      <div className="text-sm font-medium text-slate-900">Scale & Enterprise Reliability</div>
+                      <div className="text-sm font-medium text-slate-900">Portfolio Implementation</div>
                       <div className="mt-1 text-sm text-muted-foreground">
-                        Scaled infrastructure and support teams, deepened partnerships with financial institutions, and
-                        delivered features targeted at business customers requiring high availability and auditability.
+                        Built the fictional experience as a frontend project; no financial institution or service is connected.
                       </div>
                     </div>
                   </li>
 
                   <li className="flex gap-4 items-start">
-                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center font-semibold text-primary text-sm">2025</div>
+                    <div className="w-10 h-10 rounded-md bg-primary/10 flex items-center justify-center font-semibold text-primary text-sm">06</div>
                     <div>
-                      <div className="text-sm font-medium text-slate-900">Looking Ahead</div>
+                      <div className="text-sm font-medium text-slate-900">Illustrative Only</div>
                       <div className="mt-1 text-sm text-muted-foreground">
-                        Continuing international expansion, refining developer experiences, and investing in AI-driven tools
-                        that help customers make smarter, more confident financial decisions — all while keeping privacy and
-                        security at the forefront.
+                        All people, products, balances, and transactions shown are sample content for the demo.
                       </div>
                     </div>
                   </li>
@@ -285,8 +269,8 @@ const AboutUs = () => {
         {/* TEAM */}
         <section aria-label="Team" className="mb-20">
           <div className="flex items-center justify-between mb-6 mb-8 mt-12">
-            <h3 className="text-white text-xl sm:text-2xl font-bold">Meet the Team</h3>
-            <p className="text-sm text-muted-foreground hidden sm:block">Lean teams, fast decisions, strong execution.</p>
+            <h3 className="text-white text-xl sm:text-2xl font-bold">Sample Profile Cards</h3>
+            <p className="text-sm text-muted-foreground hidden sm:block">Illustrative profile content used to demonstrate the layout.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-6">
@@ -313,7 +297,7 @@ const AboutUs = () => {
                     <span className="hidden sm:inline-flex items-center px-2 py-1 rounded-md text-xs bg-primary/10 text-primary">Team</span>
                   </div>
                   <p className="mt-3 text-sm text-muted-foreground hidden sm:block">
-                    Focused on delivering secure systems and exceptional customer outcomes.
+                    Example profile card for the Alturas Finance portfolio demo; not an actual team member.
                   </p>
                 </div>
               </div>
