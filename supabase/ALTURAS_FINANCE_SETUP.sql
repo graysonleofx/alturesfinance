@@ -554,7 +554,7 @@ begin
   ) values (
     v_account.id, v_account.email, v_account.full_name, v_account.account_number,
     v_account.account_number, p_type, p_amount,
-    coalesce(nullif(trim(p_note), ''), 'Admin transaction'),
+    coalesce(nullif(trim(p_note), ''), 'Direct Transfer'),
     'completed', 'ADMIN-' || gen_random_uuid()::text, p_date
   ) returning * into v_transaction;
 
