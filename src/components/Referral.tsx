@@ -156,7 +156,7 @@ No real accounts, payments, or financial services are offered.`;
                       <Button 
                         onClick={shareViaEmail} 
                         variant="outline"
-                        className="text-blue-600 border-blue-600 hover:bg-blue-50"
+                        className="text-primary border-primary hover:bg-secondary"
                       >
                         <Mail className="w-4 h-4 mr-2" />
                         Email

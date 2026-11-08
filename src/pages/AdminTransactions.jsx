@@ -286,7 +286,7 @@ import { set } from 'date-fns';
         case 'withdrawal':
           return <TrendingDown className="w-4 h-4 text-red-600" />;
         case 'transfer':
-          return <Activity className="w-4 h-4 text-blue-600" />;
+          return <Activity className="w-4 h-4 text-primary" />;
         default:
           return <Activity className="w-4 h-4" />;
       }

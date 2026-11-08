@@ -145,7 +145,7 @@ const AdminDashboard = () => {
     switch (type) {
       case 'deposit': return <TrendingUp className="w-4 h-4 text-green-600" />;
       case 'withdrawal': return <TrendingUp className="w-4 h-4 text-red-600 rotate-180" />;
-      case 'transfer': return <Activity className="w-4 h-4 text-blue-600" />;
+      case 'transfer': return <Activity className="w-4 h-4 text-primary" />;
       default: return <Activity className="w-4 h-4" />;
     }
   };

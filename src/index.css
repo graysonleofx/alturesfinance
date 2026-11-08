@@ -17,69 +17,69 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 25% 15%;
+    --background: 210 60% 96%;
+    --foreground: 217.8 54% 19.6%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 25% 15%;
+    --card-foreground: 217.8 54% 19.6%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 25% 15%;
+    --popover-foreground: 217.8 54% 19.6%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 212 79% 42%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 17% 95%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 60% 96%;
+    --secondary-foreground: 217.8 54% 19.6%;
 
-    --muted: 210 17% 95%;
+    --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 160.1 84.1% 39.2%;
+    --accent: 211 67% 47%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222.2 47.4% 11.2%;
+    --border: 214 32% 92%;
+    --input: 214 32% 88%;
+    --ring: 212 79% 42%;
 
     /* Banking specific colors */
-    --banking-blue: 222.2 47.4% 11.2%;
-    --banking-blue-light: 217.2 32.6% 17.5%;
-    --banking-orange: 160.1 84.1% 39.2%;
-    --banking-orange-light: 160.1 84.1% 45%;
-    --banking-gray: 210 17% 95%;
+    --banking-blue: 212 79% 42%;
+    --banking-blue-light: 211 67% 47%;
+    --banking-orange: 211 67% 47%;
+    --banking-orange-light: 210 62% 58%;
+    --banking-gray: 210 60% 96%;
     --banking-gray-dark: 215 16% 47%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(222.2 47.4% 11.2%), hsl(217.2 32.6% 17.5%));
-    --gradient-hero: linear-gradient(135deg, hsl(222.2 47.4% 11.2%) 0%, hsl(217.2 32.6% 17.5%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(160.1 84.1% 39.2%), hsl(160.1 84.1% 45%));
+    --gradient-primary: linear-gradient(135deg, hsl(217 72% 18%), hsl(212 79% 42%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 72% 18%) 0%, hsl(212 79% 42%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(211 67% 47%), hsl(210 62% 58%));
 
     /* Shadows */
-    --shadow-banking: 0 10px 25px -5px hsl(222.2 47.4% 11.2% / 0.1);
-    --shadow-card: 0 4px 6px -1px hsl(222.2 47.4% 11.2% / 0.1);
-    --shadow-glow: 0 0 40px hsl(217.2 32.6% 17.5% / 0.3);
+    --shadow-banking: 0 10px 25px -5px hsl(217 72% 18% / 0.1);
+    --shadow-card: 0 4px 12px -2px hsl(217 72% 18% / 0.08);
+    --shadow-glow: 0 8px 24px hsl(212 79% 42% / 0.18);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 0 0% 100%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 212 79% 42%;
 
     --sidebar-primary-foreground: 0 0% 98%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 210 60% 96%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent-foreground: 217.8 54% 19.6%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 214 32% 92%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 212 79% 42%;
   }
 
   .dark {
@@ -123,8 +123,8 @@ All colors MUST be HSL.
 
 .demo-banner {
   padding: 8px 16px;
-  background: #10B981;
-  color: #0F172A;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
   font-size: 12px;
   font-weight: 700;
   text-align: center;
@@ -135,7 +135,25 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    color-scheme: light;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
   }
 }
