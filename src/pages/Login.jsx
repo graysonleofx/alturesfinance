@@ -4,9 +4,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { InputOTP, InputOTPGroup, InputOTPSlot } from '@/components/ui/input-otp';
-import { Lock, Eye, EyeOff } from 'lucide-react';
+import { Lock, Eye, EyeOff, ShieldAlert, Headphones } from 'lucide-react';
 import supabase from '@/lib/supabaseClient';
 import {sendOtp} from '../lib/sendOtp'
 import { verifyOtp } from '../lib/verifyOtp';
@@ -18,6 +18,7 @@ const Login = () => {
   const { toast } = useToast();
   const [showPassword, setShowPassword] = useState(false);
   const [showLoginOtp, setShowLoginOtp] = useState(false);
+  const [showRestrictionDialog, setShowRestrictionDialog] = useState(false);
   const [otpValue, setOtpValue] = useState('');
   const [formData, setFormData] = useState({
     emailOrPhone: '',
@@ -61,6 +62,40 @@ const Login = () => {
     const user = data?.user
 
     if(user) {
+      const { data: account, error: accountError } = await supabase
+        .from('accounts')
+        .select('status')
+        .eq('id', user.id)
+        .maybeSingle();
+
+      if (accountError || !account || account.status === 'blocked') {
+        const { error: signOutError } = await supabase.auth.signOut();
+        if (signOutError) {
+          console.error('Failed to sign out user after account access check:', signOutError);
+        }
+
+        localStorage.removeItem('userSession');
+        const isBlocked = account?.status === 'blocked';
+        const description = isBlocked
+          ? 'This account is restricted. Please contact the support team and report the issue.'
+          : accountError
+            ? `Unable to verify your account status: ${accountError.message}`
+            : 'Unable to verify your account. Please contact the support team.';
+
+        if (isBlocked) {
+          setShowRestrictionDialog(true);
+        } else {
+          toast({
+            title: 'Account Verification Failed',
+            description,
+            variant: 'destructive'
+          });
+        }
+        document.getElementById('login-button').disabled = false;
+        document.getElementById('login-button').innerText = 'Log In Securely';
+        return;
+      }
+
       // User is logged in
       setUser(user);
       // Send OTP for verification
@@ -240,6 +275,41 @@ const Login = () => {
       </main>
 
       {/* Login OTP Modal */}
+      <Dialog open={showRestrictionDialog} onOpenChange={setShowRestrictionDialog}>
+        <DialogContent className="overflow-hidden p-0 sm:max-w-md">
+          <div className="bg-destructive/5 px-6 pb-5 pt-7 text-center">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-destructive/10 text-destructive">
+              <ShieldAlert className="h-7 w-7" aria-hidden="true" />
+            </div>
+            <DialogHeader className="items-center space-y-2">
+              <DialogTitle className="text-xl">Account restricted</DialogTitle>
+              <DialogDescription className="max-w-sm text-center leading-relaxed">
+                This account is currently restricted and cannot sign in. Please contact our support team and report this issue for assistance.
+              </DialogDescription>
+            </DialogHeader>
+          </div>
+          <DialogFooter className="flex-col gap-2 px-6 pb-6 sm:flex-col sm:space-x-0">
+            <Button
+              className="w-full"
+              onClick={() => {
+                setShowRestrictionDialog(false);
+                navigate('/contact');
+              }}
+            >
+              <Headphones className="mr-2 h-4 w-4" aria-hidden="true" />
+              Contact Support
+            </Button>
+            <Button
+              variant="ghost"
+              className="w-full"
+              onClick={() => setShowRestrictionDialog(false)}
+            >
+              Close
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
       <Dialog open={showLoginOtp} onOpenChange={setShowLoginOtp}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
