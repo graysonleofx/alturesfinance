@@ -219,12 +219,12 @@ const Dashboard = () => {
     setReferralCodeCopied(true);
     toast({
       title: "Referral code copied!",
-      description: "This demo share code has been copied."
+      description: "This share code has been copied."
     });
     setTimeout(() => setReferralCodeCopied(false), 2000);
   };
   const bankDetails = {
-    accountName: "Alturas Finance Demo",
+    accountName: "Alturas Finance",
     accountNumber: "3032410090",
     bankName: "Alturas Finance",
     routingNumber: "021000021"
@@ -686,7 +686,7 @@ const Dashboard = () => {
                       <div className="bg-gradient-primary p-4 md:p-6 rounded-lg text-white">
                         <div className="flex justify-between items-start mb-6 md:mb-8">
                           <div>
-                            <p className="text-sm opacity-80">Alturas Finance demo</p>
+                            <p className="text-sm opacity-80">Alturas Finance </p>
                             <p className="text-xs opacity-60">Virtual Debit Card</p>
                           </div>
                           <div className="text-right">

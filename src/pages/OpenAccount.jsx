@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Lock, Eye, EyeOff, CheckCircle } from 'lucide-react';
 import BankPageHeader from '@/components/BankPageHeader';
 import supabase from '../lib/supabaseClient';
@@ -163,34 +164,6 @@ const OpenAccount = () => {
   //   navigate('/dashboard');
   // };
 
-  if (accountCreated) {
-    return (
-      <div className="alturas-page">
-        <BankPageHeader page="signup" />
-        <main className="alturas-page-content alturas-auth-layout">
-            <Card className="alturas-success-panel text-center">
-              <CardHeader>
-                <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                  <CheckCircle className="w-8 h-8 text-green-600" />
-                </div>
-                <CardTitle className="text-2xl text-primary">Demo Profile Ready</CardTitle>
-                <CardDescription>No real financial account has been opened.</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="p-4 bg-secondary rounded-lg">
-                  <p className="text-sm text-muted-foreground mb-2">Sample Account ID</p>
-                  <p className="text-2xl font-bold text-primary">{generatedAccountNumber}</p>
-                </div>
-                <Button onClick={proceedToDashboard} className="w-full" size="lg">
-                  Proceed to Dashboard
-                </Button>
-              </CardContent>
-            </Card>
-        </main>
-      </div>
-    );
-  }
-
   return (
     <div className="alturas-page">
       <BankPageHeader page="signup" />
@@ -349,6 +322,34 @@ const OpenAccount = () => {
             </CardContent>
           </Card>
       </main>
+      <Dialog open={accountCreated}>
+        <DialogContent className="w-[calc(100%-2rem)] max-w-md rounded-2xl border-0 p-0 shadow-2xl">
+          <div className="px-5 pb-6 pt-8 text-center sm:px-8 sm:pb-8">
+            <DialogHeader className="items-center space-y-3">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50 ring-8 ring-emerald-50/60">
+                <CheckCircle aria-hidden="true" className="h-9 w-9 text-emerald-600" />
+              </div>
+              <DialogTitle className="text-xl font-bold text-slate-900 sm:text-2xl">
+                Account created Successfully
+              </DialogTitle>
+              <DialogDescription className="max-w-sm text-sm leading-relaxed text-slate-500">
+                Your account has been created successfully. Your account number is ready below.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="my-6 rounded-xl border border-slate-200 bg-slate-50 px-4 py-4">
+              <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-slate-500">
+                Account Number
+              </p>
+              <p className="break-all text-2xl font-bold tracking-wide text-slate-900">
+                {generatedAccountNumber}
+              </p>
+            </div>
+            <Button onClick={proceedToDashboard} className="alturas-primary-button w-full" size="lg">
+              Proceed to Dashboard
+            </Button>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
